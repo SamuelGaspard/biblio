@@ -57,6 +57,15 @@ def menu_principal():
         print("1. Ajouter un livre")
         print("2. Afficher le catalogue")
         print("3. Quitter")
+        print("4. Archiver un livre")
+        print("5. Rechercher un livre")
+        print("6. Supprimer un livre")
+        print("7. Mettre à jour un livre")
+        print("8. Emprunter un livre")
+        print("9. Retourner un livre")
+        print("10. Afficher les livres empruntés")
+        print("0. Aide")
+        
 
         choix = input("Votre choix : ").strip()
 
