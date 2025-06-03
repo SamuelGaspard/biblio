@@ -29,13 +29,13 @@ def ajouter_livre():
         "statut": "disponible"  # Par défaut, un nouveau livre est disponible
     }
     catalogue_livres.append(nouveau_livre)
-    print(f"Livre '{titre}' ajouté avec succès au catalogue.")
+    print(f"Livre '{titre}' ####################ajouté avec succès au catalogue############################.")
 
 def afficher_catalogue():
     """
     Affiche tous les livres actuellement dans le catalogue.
     """
-    print("\n--- Catalogue des livres ---")
+    print("\n####################################Catalogue des livres############################################## ---")
     if not catalogue_livres:
         print("Le catalogue est vide pour le moment.")
         return
