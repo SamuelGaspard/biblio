@@ -56,7 +56,7 @@ def menu_principal():
         print("\n--- Menu BiblioPy ---")
         print("1. Ajouter un livre")
         print("2. Afficher le catalogue")
-        print("3. Quitter")
+        print("3. quitter")
         print("4. Archiver un livre")
         print("5. Rechercher un livre")
         print("6. Supprimer un livre")
@@ -64,8 +64,7 @@ def menu_principal():
         print("8. Emprunter un livre")
         print("9. Retourner un livre")
         print("10. Afficher les livres empruntés")
-        print("0. Aide")
-        
+        print("0. Quitter")
 
         choix = input("Votre choix : ").strip()
 
@@ -74,7 +73,21 @@ def menu_principal():
         elif choix == '2':
             afficher_catalogue()
         elif choix == '3':
-            print("Merci d'avoir utilisé BiblioPy. Au revoir !")
+            #quitte()
+        #elif choix == '4':
+            #archiver_un_livre()
+        #elif choix == '5':
+            #Rechercher_un_livre()
+        #elif choix == '6':
+            ()
+        #elif choix == '7':
+            #archiver_un_livre()
+        
+        
+
+            #print("Merci d'avoir utilisé BiblioPy. Au revoir !")
+        elif choix =='4' :
+            
             break
         else:
             print("Choix invalide. Veuillez réessayer.")
