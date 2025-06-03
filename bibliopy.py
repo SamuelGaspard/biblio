@@ -31,6 +31,24 @@ def ajouter_livre():
     catalogue_livres.append(nouveau_livre)
     print(f"Livre '{titre}' ####################ajouté avec succès au catalogue############################.")
 
+def supprimer_livre():
+    """
+    Permet à l'utilisateur de supprimer un livre du catalogue.
+    """
+    afficher_catalogue()
+    if not catalogue_livres:
+        return
+
+    try:
+        index = int(input("Entrez le numéro du livre à supprimer : ")) - 1
+        if 0 <= index < len(catalogue_livres):
+            livre_supprime = catalogue_livres.pop(index)
+            print(f"Livre '{livre_supprime['titre']}' supprimé avec succès.")
+        else:
+            print("Erreur : Numéro de livre invalide.")
+    except ValueError:
+        print("Erreur : Veuillez entrer un numéro valide.")
+
 def afficher_catalogue():
     """
     Affiche tous les livres actuellement dans le catalogue.
@@ -53,7 +71,7 @@ def menu_principal():
     Affiche le menu principal de l'application et gère les choix de l'utilisateur.
     """
     while True:
-        print("\n--- Menu BiblioPy ---")
+        print("\n--- ########################Menu BiblioPy################################ ---")
         print("1. Ajouter un livre")
         print("2. Afficher le catalogue")
         print("3. quitter")
@@ -73,6 +91,7 @@ def menu_principal():
         elif choix == '2':
             afficher_catalogue()
         elif choix == '3':
+            supprimer_livre()
             #quitte()
         #elif choix == '4':
             #archiver_un_livre()
