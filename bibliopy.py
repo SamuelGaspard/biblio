@@ -29,31 +29,13 @@ def ajouter_livre():
         "statut": "disponible"  # Par défaut, un nouveau livre est disponible
     }
     catalogue_livres.append(nouveau_livre)
-    print(f"Livre '{titre}' ####################ajouté avec succès au catalogue############################.")
-
-def supprimer_livre():
-    """
-    Permet à l'utilisateur de supprimer un livre du catalogue.
-    """
-    afficher_catalogue()
-    if not catalogue_livres:
-        return
-
-    try:
-        index = int(input("Entrez le numéro du livre à supprimer : ")) - 1
-        if 0 <= index < len(catalogue_livres):
-            livre_supprime = catalogue_livres.pop(index)
-            print(f"Livre '{livre_supprime['titre']}' supprimé avec succès.")
-        else:
-            print("Erreur : Numéro de livre invalide.")
-    except ValueError:
-        print("Erreur : Veuillez entrer un numéro valide.")
+    print(f"Livre '{titre}' ajouté avec succès au catalogue.")
 
 def afficher_catalogue():
     """
     Affiche tous les livres actuellement dans le catalogue.
     """
-    print("\n####################################Catalogue des livres############################################## ---")
+    print("\n--- Catalogue des livres ---")
     if not catalogue_livres:
         print("Le catalogue est vide pour le moment.")
         return
@@ -71,18 +53,10 @@ def menu_principal():
     Affiche le menu principal de l'application et gère les choix de l'utilisateur.
     """
     while True:
-        print("\n--- ########################Menu BiblioPy################################ ---")
+        print("\n--- Menu BiblioPy ---")
         print("1. Ajouter un livre")
         print("2. Afficher le catalogue")
-        print("3. quitter")
-        print("4. Archiver un livre")
-        print("5. Rechercher un livre")
-        print("6. Supprimer un livre")
-        print("7. Mettre à jour un livre")
-        print("8. Emprunter un livre")
-        print("9. Retourner un livre")
-        print("10. Afficher les livres empruntés")
-        print("0. Quitter")
+        print("3. Quitter")
 
         choix = input("Votre choix : ").strip()
 
@@ -91,22 +65,7 @@ def menu_principal():
         elif choix == '2':
             afficher_catalogue()
         elif choix == '3':
-            supprimer_livre()
-            #quitte()
-        #elif choix == '4':
-            #archiver_un_livre()
-        #elif choix == '5':
-            #Rechercher_un_livre()
-        #elif choix == '6':
-            ()
-        #elif choix == '7':
-            #archiver_un_livre()
-        
-        
-
-            #print("Merci d'avoir utilisé BiblioPy. Au revoir !")
-        elif choix =='4' :
-            
+            print("Merci d'avoir utilisé BiblioPy. Au revoir !")
             break
         else:
             print("Choix invalide. Veuillez réessayer.")
